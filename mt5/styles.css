@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #151515;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.main-image {
+    max-width: 50%;
+    max-height: 50%;
+    transition: transform 0.6s ease-in-out;
+    margin-left: -77%;
+}
+
+.main-image:hover {
+    transform: scale(1.2);
+}
+
+.text-container {
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    position: relative;
+    width: calc(100% - 200px);
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    padding-left: 4%;
+    font-size: 55px;
+}
+
+.paragraph {
+    font-size: 1em;
+    line-height: 1.6;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    text-align: left;
+    padding-left: 4%;
+    font-size: 20px;
+    max-width: 800px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.side-image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-top: -30%;
+    margin-left: 5%;
+}
+
+.side-image {
+    width: 50%;
+    height: auto;
+    transition: transform 0.8s ease-in-out;
+}
+
+.side-image:hover {
+    transform: scale(1.2);
+}
+
+/* Подключаем шрифт Horizon */
+@font-face {
+    font-family: 'Horizon';
+    src: url('path-to-your-font/Horizon.ttf') format('truetype');
+}
+
+.container {
+    display: flex;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.Btn {
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.4s, border-radius 0.4s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.Btn .text {
+    position: absolute;
+    color: #ffffff;
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.4s, left 0.4s;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Btn:hover {
+    width: 110px;
+    border-radius: 30px;
+}
+
+.Btn:hover .text {
+    opacity: 1;
+}
+
+.Btn:hover .svgIcon {
+    opacity: 0;
+}
+
+.instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    background: -webkit-linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+}
+
+.youtube {
+    background-color: #ff0000;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.svgIcon {
+    transition: opacity 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
